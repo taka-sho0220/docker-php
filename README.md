@@ -1,4 +1,4 @@
-# dockerでのLaravel環境（php,nginx,mysql）
+# dockerでのphp環境（php,nginx,mysql）
 
 ## ディレクトリ
 
