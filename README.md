@@ -1,4 +1,4 @@
-# dockerでのLaravel環境（php,Laravel,nginx,mysql）
+# dockerでのLaravel環境（php,nginx,mysql）
 
 ## ディレクトリ
 
@@ -13,7 +13,7 @@
     ・php.ini
 　・www　/作業ディレクトリ
  　　・html
-        ・Laravel　/laravelフォルダ 
+        ・index.php
 ・docker-compose.yml
 
 ```
