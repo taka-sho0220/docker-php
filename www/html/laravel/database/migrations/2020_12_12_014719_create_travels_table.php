@@ -22,8 +22,11 @@ class CreateTravelsTable extends Migration
                 $table->string('age');
                 $table->string('evaluation');
                 $table->text('impressions');
-                $table->binary('photos');
                 $table->string('terms');
+                $table->unsignedBigInteger('prefecture_id');
+                $table->unsignedBigInteger('region_id');
+                $table->foreign('prefecture_id')->references('id')->on('prefectures');
+                $table->foreign('region_id')->references('id')->on('regions');
                 $table->timestamps();
             });
         }
