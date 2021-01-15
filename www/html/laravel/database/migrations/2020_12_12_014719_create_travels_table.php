@@ -23,8 +23,8 @@ class CreateTravelsTable extends Migration
                 $table->string('evaluation');
                 $table->text('impressions');
                 $table->string('terms');
-                $table->unsignedBigInteger('prefecture_id');
-                $table->unsignedBigInteger('region_id');
+                $table->integer('prefecture_id')->unsigned;
+                $table->integer('region_id')->unsigned;
                 $table->foreign('prefecture_id')->references('id')->on('prefectures');
                 $table->foreign('region_id')->references('id')->on('regions');
                 $table->timestamps();
