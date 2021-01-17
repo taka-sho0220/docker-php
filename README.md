@@ -44,12 +44,12 @@
 
 ### 環境設定
 ```
-- windows10
-- docker 20.10.2
-- php 7.4
- - laravel 6.2.7
-- nginx 1.19.6
-- mysql 5.7
+・windows10
+・ docker 20.10.2
+・ php 7.4
+ ・ laravel 6.2.7
+・ nginx 1.19.6
+・ mysql 5.7
 
 ```
 
