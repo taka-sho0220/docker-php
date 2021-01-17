@@ -40,9 +40,9 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    private const GUEST_USER_EMAIL = 'gest@gest.com';
+    private const GUEST_USER_EMAIL = 'guest@guest.com';
 
-    public function gestLogin()
+    public function guestLogin()
     {
         $user = User::where('email',self::GUEST_USER_EMAIL)->first();
         if($user){
