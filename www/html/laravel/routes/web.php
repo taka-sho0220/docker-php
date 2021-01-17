@@ -38,7 +38,7 @@ Route::get('/travel/cyugoku', 'TravelController@showCyugoku');
 
 Route::get('/travel/shikoku', 'TravelController@showShikoku');
 
-Route::get('/travel/kyu_oki', 'TravelController@showKyu_oki');
+Route::get('/travel/kyushu', 'TravelController@showKyushu');
 
 Route::post('/travel/update', 'TravelController@exeUpdate')->name('update');
 

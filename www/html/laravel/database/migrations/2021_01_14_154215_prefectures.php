@@ -13,13 +13,14 @@ class Prefectures extends Migration
      */
     public function up()
     {
-        Schema::create('prefectures', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('region_id');//regions('id')
-            $table->string('name');
-            $table->foreign('region_id')->references('id')->on('regions');
-            $table->timestamps();
-        });
+        if(!Schema::hasTable('prefectures')){
+            Schema::create('prefectures', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->integer('region_id')->index();
+                $table->string('place')->unique();
+                $table->timestamps();
+            });
+        }
     }
 
     /**
