@@ -24,6 +24,8 @@ class Travel extends Model
         'impressions',
         'photos',
         'terms',
+        'prefecture_id',
+        'region_id',
         'updated_at'
     ];
 }

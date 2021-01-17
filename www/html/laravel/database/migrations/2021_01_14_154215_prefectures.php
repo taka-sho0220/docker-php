@@ -16,7 +16,7 @@ class Prefectures extends Migration
         Schema::create('prefectures', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('region_id');//regions('id')
-            $table->string('name');
+            $table->string('name')->primary();
             $table->foreign('region_id')->references('id')->on('regions');
             $table->timestamps();
         });

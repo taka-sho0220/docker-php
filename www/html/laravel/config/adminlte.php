@@ -267,7 +267,7 @@ return [
                 ],
                 [
                     'text' => '九州、沖縄',
-                    'url' => 'travel/kyu_oki',
+                    'url' => 'travel/kyushu',
                 ],
                 
             ]

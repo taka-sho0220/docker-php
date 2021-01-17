@@ -23,6 +23,7 @@ class CreateTravelsTable extends Migration
                 $table->string('evaluation');
                 $table->text('impressions');
                 $table->string('terms');
+                $table->string('photos');
                 $table->integer('prefecture_id')->unsigned;
                 $table->integer('region_id')->unsigned;
                 $table->foreign('prefecture_id')->references('id')->on('prefectures');
