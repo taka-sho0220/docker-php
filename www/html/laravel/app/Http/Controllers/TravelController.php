@@ -67,7 +67,7 @@ class TravelController extends Controller
     public function exeCreate(TravelRequest $request)
     {
         $inputs = $request->all();
-
+        
         $files = $request->file('photos');
 
         if ($request->hasFile('photos') && $files->isValid()) {
@@ -126,6 +126,10 @@ class TravelController extends Controller
         \Session::flash('err_msg', 'データを更新しました。');
         return redirect(route('home'));
     }
+
+    /*
+    *idで紐付ける。
+    */
     public function showHoka_toho()
     {
         $hokkaidous =  Travel::where('place', '北海道')->get();
@@ -235,7 +239,7 @@ class TravelController extends Controller
             ->with('ehimes',$ehimes)
             ->with('kouchis',$kouchis);
     }
-    public function showKyu_oki()
+    public function showKyushu()
     {
         $hukuokas =  Travel::where('place', '福岡県')->get();
         $sagas = Travel::where('place', '佐賀県')->get();
