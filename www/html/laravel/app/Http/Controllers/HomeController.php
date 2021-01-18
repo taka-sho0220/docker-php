@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\travel;
+use App\Models\Travel;
+use App\Models\Prefecture;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
@@ -27,7 +28,10 @@ class HomeController extends Controller
     {
         
         $travels = Travel::all();
-        
+        // $prefectures = Prefectures::all();
+        // $prefectures = \App\Models\Prefectures::get();
+
+
         return view('home',['travels'=>$travels]);
     }
 }

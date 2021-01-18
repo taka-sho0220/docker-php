@@ -30,7 +30,11 @@
                 <th>投稿日</th>
                 <td>{{ $travel->updated_at }}</td>
                 <th>場所</th>
-                <td>{{ $travel->place }}</td>
+                <?php
+                $prefectures = \DB::table('prefectures')->find($travel->prefecture_id);
+                $prefe = $prefectures->place;
+                ?>
+                <td>{{ $prefe }}</td>
                 <th>性別</th>
                 <td>{{ $travel->gender }}</td>
                 <th>年齢層</th>

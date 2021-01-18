@@ -29,7 +29,11 @@
             @foreach($travels as $travel)
             <tr>
                 <td><a href="/travel/{{ $travel->id }}">{{ $travel->name }}</a></td>
-                <td>{{ $travel->prefecture_id }}</td>
+                <?php
+                $prefectures = \DB::table('prefectures')->find($travel->prefecture_id);
+                $prefe = $prefectures->place;
+                ?>
+                <td>{{ $prefe }}</td>
                 <td>{{ $travel->age }}</td>
                 <td>{{ $travel->evaluation }}</td>
                 <td>{{ $travel->updated_at }}</td>
