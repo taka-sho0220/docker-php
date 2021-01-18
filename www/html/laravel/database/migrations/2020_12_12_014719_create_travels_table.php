@@ -17,7 +17,8 @@ class CreateTravelsTable extends Migration
             Schema::create('travels', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('name');
-                $table->string('place');
+                $table->integer('prefecture_id')->index();
+                $table->integer('region_id')->index();
                 $table->string('gender');
                 $table->string('age');
                 $table->string('evaluation');
@@ -25,8 +26,6 @@ class CreateTravelsTable extends Migration
                 $table->string('photos');
                 $table->string('terms');
                 //外部キー制約
-                $table->integer('prefecture_id')->index();
-                $table->integer('region_id')->index();
                 $table->foreign('prefecture_id')->references('id')->on('prefectures');
                 $table->foreign('region_id')->references('region_id')->on('prefectures'); 
                 $table->unique(['prefecture_id', 'region_id'],'uq_roles');

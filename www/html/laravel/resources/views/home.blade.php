@@ -29,7 +29,7 @@
             @foreach($travels as $travel)
             <tr>
                 <td><a href="/travel/{{ $travel->id }}">{{ $travel->name }}</a></td>
-                <td>{{ $travel->place }}</td>
+                <td>{{ $travel->prefecture_id }}</td>
                 <td>{{ $travel->age }}</td>
                 <td>{{ $travel->evaluation }}</td>
                 <td>{{ $travel->updated_at }}</td>

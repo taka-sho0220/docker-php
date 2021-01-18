@@ -25,7 +25,7 @@ class TravelRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'place' => 'required',
+            'prefecture_id' => 'required',
             'gender' => 'required',
             'age' => 'required',
             'evaluation' => 'required',
