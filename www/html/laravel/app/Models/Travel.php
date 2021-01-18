@@ -17,14 +17,13 @@ class Travel extends Model
     protected $fillable = 
     [
         'name',
-        'place',
+        'prefecture_id',
         'gender',
         'age',
         'evaluation',
         'impressions',
         'photos',
         'terms',
-        'prefecture_id',
         'region_id',
         'updated_at'
     ];

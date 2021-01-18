@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\travel;
-use App\Models\contact;
+use App\Models\Travel;
+use App\Models\Contact;
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\TravelRequest;
@@ -67,7 +67,6 @@ class TravelController extends Controller
     public function exeCreate(TravelRequest $request)
     {
         $inputs = $request->all();
-        
         $files = $request->file('photos');
 
         if ($request->hasFile('photos') && $files->isValid()) {
@@ -78,6 +77,7 @@ class TravelController extends Controller
         \DB::beginTransaction();
         try {
             Travel::create($inputs);
+            // dd($query->toSql(), $query->getBindings());
             \DB::commit();
         } catch (\Throwable $e) {
             \DB::rollback();
@@ -109,7 +109,7 @@ class TravelController extends Controller
             $travel = Travel::find($inputs['id']);
             $travel->fill([
                 'name' => $inputs['name'],
-                'place' => $inputs['place'],
+                'prefecture_id' => $inputs['prefecture_id'],
                 "gender" => $inputs['gender'],
                 'age' => $inputs['age'],
                 'evaluation' => $inputs['evaluation'],

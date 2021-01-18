@@ -25,7 +25,7 @@ class Prefectures extends Model
         $list = array();
         $list += array("" => "選択してください");
         foreach($prefectures as $prefecture){
-            $list +=array($prefecture->place => $prefecture->place);
+            $list +=array($prefecture->id => $prefecture->place);
         }
         return $list;
     }
