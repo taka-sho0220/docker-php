@@ -25,7 +25,7 @@
             </div>
         </div>
 
-    <div class="form-group row">
+        <div class="form-group row">
             <label for="selectplace" class="col-sm-2 col-form-label">場所</label>
             <div class="col-sm-10">
                 {{ Form::select('prefecture_id', App\Models\Prefectures::selectlist(), old('prefecture_id'), ['class' => 'form-control', 'id' => 'prefecture_id', 'required' => 'required']) }}

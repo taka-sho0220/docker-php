@@ -26,64 +26,11 @@
                 @endif
             </div>
         </div>
+        
         <div class="form-group row">
             <label for="selectplace" class="col-sm-2 col-form-label">場所</label>
             <div class="col-sm-10">
-            <select name="place" class="form-control @if($errors->has('place')) is-invalid @endif" id="inputPlace" placeholder="都道府県" required>
-            <option value="" @if(old('place', $travel->place)=='') selected  @endif>選択してください</option>
-            <option value="北海道" @if(old('place', $travel->place)=='北海道') selected  @endif>北海道</option>
-            <option value="青森県" @if(old('place', $travel->place)=='青森県') selected  @endif>青森県</option>
-            <option value="岩手県" @if(old('place', $travel->place)=='岩手県') selected  @endif>岩手県</option>
-            <option value="宮城県" @if(old('place', $travel->place)=='宮城県') selected  @endif>宮城県</option>
-            <option value="山形県" @if(old('place', $travel->place)=='山形県') selected  @endif>山形県</option>
-            <option value="秋田県" @if(old('place', $travel->place)=='秋田件') selected  @endif>秋田県</option>
-            <option value="福島県" @if(old('place', $travel->place)=='福島県') selected  @endif>福島県</option>
-            <option value="茨城県" @if(old('place', $travel->place)=='茨城県') selected  @endif>茨城県</option>
-            <option value="栃木県" @if(old('place', $travel->place)=='栃木県') selected  @endif>栃木県</option>
-            <option value="群馬県" @if(old('place', $travel->place)=='群馬県') selected  @endif>群馬県</option>
-            <option value="埼玉県" @if(old('place', $travel->place)=='埼玉県') selected  @endif>埼玉県</option>
-            <option value="千葉県" @if(old('place', $travel->place)=='千葉県') selected  @endif>千葉県</option>
-            <option value="東京都" @if(old('place', $travel->place)=='東京都') selected  @endif>東京都</option>
-            <option value="神奈川県" @if(old('place', $travel->place) =='神奈川県') selected  @endif>神奈川県</option>
-            <option value="新潟県" @if(old('place', $travel->place)=='新潟県') selected  @endif>新潟県</option>
-            <option value="富山県" @if(old('place', $travel->place)=='富山県') selected  @endif>富山県</option>
-            <option value="石川県" @if(old('place', $travel->place)=='石川県') selected  @endif>石川県</option>
-            <option value="福井県" @if(old('place', $travel->place)=='福井県') selected  @endif>福井県</option>
-            <option value="山梨県" @if(old('place', $travel->place)=='山梨県') selected  @endif>山梨県</option>
-            <option value="長野県" @if(old('place', $travel->place)=='長野県') selected  @endif>長野県</option>
-            <option value="岐阜県" @if(old('place', $travel->place)=='岐阜県') selected  @endif>岐阜県</option>
-            <option value="静岡県" @if(old('place', $travel->place)=='静岡県') selected  @endif>静岡県</option>
-            <option value="愛知県" @if(old('place', $travel->place)=='愛知県') selected  @endif>愛知県</option>
-            <option value="三重県" @if(old('place', $travel->place)=='三重県') selected  @endif>三重県</option>
-            <option value="滋賀県" @if(old('place', $travel->place)=='滋賀県') selected  @endif>滋賀県</option>
-            <option value="京都府" @if(old('place', $travel->place)=='京都府') selected  @endif>京都府</option>
-            <option value="大阪府" @if(old('place', $travel->place)=='大阪府') selected  @endif>大阪府</option>
-            <option value="兵庫県" @if(old('place', $travel->place)=='兵庫県') selected  @endif>兵庫県</option>
-            <option value="奈良県" @if(old('place', $travel->place)=='奈良県') selected  @endif>奈良県</option>
-            <option value="和歌山県" @if(old('place', $travel->place)=='和歌山県') selected  @endif>和歌山県</option>
-            <option value="鳥取県" @if(old('place', $travel->place)=='鳥取県') selected  @endif>鳥取県</option>
-            <option value="島根県" @if(old('place', $travel->place)=='島根県') selected  @endif>島根県</option>
-            <option value="岡山県" @if(old('place', $travel->place)=='岡山県') selected  @endif>岡山県</option>
-            <option value="広島県" @if(old('place', $travel->place)=='広島県') selected  @endif>広島県</option>
-            <option value="山口県" @if(old('place', $travel->place)=='山口県') selected  @endif>山口県</option>
-            <option value="徳島県" @if(old('place', $travel->place)=='徳島県') selected  @endif>徳島県</option>
-            <option value="香川県" @if(old('place', $travel->place)=='香川県') selected  @endif>香川県</option>
-            <option value="愛媛県" @if(old('place', $travel->place)=='愛媛県') selected  @endif>愛媛県</option>
-            <option value="高知県" @if(old('place', $travel->place)=='高知県') selected  @endif>高知県</option>
-            <option value="福岡県" @if(old('place', $travel->place)=='福岡県') selected  @endif>福岡県</option>
-            <option value="佐賀県" @if(old('place', $travel->place)=='佐賀県') selected  @endif>佐賀県</option>
-            <option value="長崎県" @if(old('place', $travel->place)=='長崎県') selected  @endif>長崎県</option>
-            <option value="熊本県" @if(old('place', $travel->place)=='熊本県') selected  @endif>熊本県</option>
-            <option value="大分県" @if(old('place', $travel->place)=='大分県') selected  @endif>大分県</option>
-            <option value="宮崎県" @if(old('place', $travel->place)=='宮崎県') selected  @endif>宮崎県</option>
-            <option value="鹿児島県" @if(old('place', $travel->place)=='鹿児島県') selected  @endif>鹿児島県</option>
-            <option value="沖縄県" @if(old('place',  $travel->place)=='沖縄県') selected  @endif>沖縄県</option>
-        </select>
-                @if($errors->has('place'))
-                    <div class="invalid-feedback">{{ $errors->first('place') }}</div>
-                @else
-                    <div class="invalid-feedback">必須項目です</div>
-                @endif
+                {{ Form::select('prefecture_id', App\Models\Prefectures::selectlist(), old('prefecture_id'), ['class' => 'form-control', 'id' => 'prefecture_id', 'required' => 'required']) }}
             </div>
         </div>
 
