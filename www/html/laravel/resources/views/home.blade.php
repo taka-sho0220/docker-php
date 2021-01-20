@@ -29,14 +29,17 @@
             @foreach($travels as $travel)
             <tr>
                 <td><a href="/travel/{{ $travel->id }}">{{ $travel->name }}</a></td>
-                <?php
-                $prefectures = \DB::table('prefectures')->find($travel->prefecture_id);
-                $prefe = $prefectures->place;
-                ?>
+                @php
+                    $prefectures = \DB::table('prefectures')->find($travel->prefecture_id);
+                    $prefe = $prefectures->place;
+                @endphp
                 <td>{{ $prefe }}</td>
                 <td>{{ $travel->age }}</td>
                 <td>{{ $travel->evaluation }}</td>
-                <td>{{ $travel->updated_at }}</td>
+                @php
+                    $exp = explode('-',$travel->updated_at);
+                @endphp
+                <td>{{ $exp[0].'/'.$exp[1] }}</td>
                 <td><button type="button" class="btn btn-primary" onclick="location.href='/travel/edit/{{ $travel->id }}'">編集</button></td>
                 <form method="post" action="{{ route('delete', $travel->id) }}" onSubmit="return checkDelete()">
                     @csrf
@@ -67,4 +70,5 @@
             }
         }
     </script>
+</body>
     @endsection

@@ -28,10 +28,6 @@ class HomeController extends Controller
     {
         
         $travels = Travel::all();
-        // $prefectures = Prefectures::all();
-        // $prefectures = \App\Models\Prefectures::get();
-
-
         return view('home',['travels'=>$travels]);
     }
 }

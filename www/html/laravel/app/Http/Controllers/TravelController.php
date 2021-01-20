@@ -77,7 +77,6 @@ class TravelController extends Controller
         \DB::beginTransaction();
         try {
             Travel::create($inputs);
-            // dd($query->toSql(), $query->getBindings());
             \DB::commit();
         } catch (\Throwable $e) {
             \DB::rollback();
