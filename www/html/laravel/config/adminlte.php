@@ -242,7 +242,7 @@ return [
             'icon' => 'fas fa-fw fa-lock',
             'submenu' =>[
                 [
-                    'text' => '北海道、東北',
+                    'text' => '北海道・東北',
                     'url' => 'travel/hoka_toho',
                 ],
                 [
@@ -266,7 +266,7 @@ return [
                     'url' => 'travel/shikoku',
                 ],
                 [
-                    'text' => '九州、沖縄',
+                    'text' => '九州・沖縄',
                     'url' => 'travel/kyushu',
                 ],
                 
