@@ -127,19 +127,33 @@ php artisan storage:link
 データベース名:travel
 テーブル名:travels
 
-|   Column    |     Type     | Null  | key | Default |　  Extra     |
-| :---------: | :----------: | :---: |:---:|  :---:  | :----------: |   
-| id          | bigint(20)   | No    | PRI | None    |auto_increment|
-| name        | varchar(191) | No    |     | None    |              |
-| place       | varchar(191) | No    |     | None    |              |
-| gender      | varchar(191) | No    |     | None    |              |
-| age         | varchar(191) | No    |     | None    |              |
-| evaluation  | varchar(100) | No    |     | None    |              |
-| impressions | text         | No    |     | None    |              |
-| photos      | blob         | Yes   |     | Null    |              |
-| terms       | varchar(191) | No    |     | None    |              |
-| created_at  | timestamp    | Yes   |     | NUll    |              |
-| updated_at  | timestamp    | Yes   |     | Null    |              |
+|     Column    |     Type     | Null  | key | Default |　  Extra     |
+| :-----------: | :----------: | :---: |:---:|  :---:  | :----------: |   
+| id            | bigint(20)   | No    | PRI | None    |auto_increment|
+| name          | varchar(191) | No    |     | None    |              |
+| prefecture_id | varchar(191) | No    |     | None    |              |
+| gender        | varchar(191) | No    |     | None    |              |
+| age           | varchar(191) | No    |     | None    |              |
+| evaluation    | varchar(191) | No    |     | None    |              |
+| impressions   | text         | No    |     | None    |              |
+| photos        | varchar(191) | No    |     | Null    |              |
+| terms         | varchar(191) | No    |     | None    |              |
+| created_at    | timestamp    | Yes   |     | NUll    |              |
+| updated_at    | timestamp    | Yes   |     | Null    |              |
+
+
+- 各都道府県データベース
+
+データベース名:travel
+テーブル名:prefecture
+
+|     Column    |     Type     | Null  | key | Default |　  Extra     |
+| :-----------: | :----------: | :---: |:---:|  :---:  | :----------: |   
+| id            | bigint(20)   | No    | PRI | None    |auto_increment|
+| region_id     | int(20)      | No    |     | None    |              |
+| place         | varchar(191) | No    |     | None    |              |
+
+
 
 
 ### migration方法
