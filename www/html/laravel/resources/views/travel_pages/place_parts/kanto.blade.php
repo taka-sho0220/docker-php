@@ -13,8 +13,10 @@
     <p>茨城県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($ibarakis as $ibaraki)
-            <div class="col-sm"><a href="/travel/{{ $ibaraki->id }}"><img src="{{ asset('storage/profiles/'. $ibaraki->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($kantos as $kanto)
+            @if($kanto->prefecture_id == 8)
+            <div class="col-sm"><a href="/travel/{{ $kanto->id }}"><img src="{{ asset('storage/profiles/'. $kanto->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -23,8 +25,10 @@
     <p>栃木県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($tochigis as $tochigi)
-            <div class="col-sm"><a href="/travel/{{ $tochigi->id }}"><img src="{{ asset('storage/profiles/'. $tochigi->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($kantos as $kanto)
+            @if($kanto->prefecture_id == 9)
+            <div class="col-sm"><a href="/travel/{{ $kanto->id }}"><img src="{{ asset('storage/profiles/'. $kanto->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -33,8 +37,10 @@
     <p>群馬県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($gunmas as $gunma)
+            @foreach($kantos as $kanto)
+            @if($kanto->prefecture_id == 10)
             <div class="col-sm"><a href="/travel/{{ $gunma->id }}"><img src="{{ asset('storage/profiles/'. $gunma->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -43,8 +49,10 @@
     <p>埼玉県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($saitamas as $saitama)
-            <div class="col-sm"><a href="/travel/{{ $saitama->id }}"><img src="{{ asset('storage/profiles/'. $saitama->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($kantos as $kanto)
+            @if($kanto->prefecture_id == 11)
+            <div class="col-sm"><a href="/travel/{{ $kanto->id }}"><img src="{{ asset('storage/profiles/'. $kanto->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -53,8 +61,10 @@
     <p>千葉県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($chibas as $chiba)
-            <div class="col-sm"><a href="/travel/{{ $chiba->id }}"><img src="{{ asset('storage/profiles/'. $chiba->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($kantos as $kanto)
+            @if($kanto->prefecture_id == 12)
+            <div class="col-sm"><a href="/travel/{{ $kanto->id }}"><img src="{{ asset('storage/profiles/'. $kanto->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -63,8 +73,10 @@
     <p>東京都</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($tokyos as $tokyo)
-            <div class="col-sm"><a href="/travel/{{ $tokyo->id }}"><img src="{{ asset('storage/profiles/'. $tokyo->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($kantos as $kanto)
+            @if($kanto->prefecture_id == 13)
+            <div class="col-sm"><a href="/travel/{{ $kanto->id }}"><img src="{{ asset('storage/profiles/'. $kanto->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -73,8 +85,10 @@
     <p>神奈川県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($kanagawas as $kanagawa)
-            <div class="col-sm"><a href="/travel/{{ $kanagawa->id }}"><img src="{{ asset('storage/profiles/'. $kanagawa->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($kantos as $kanto)
+            @if($kanto->prefecture_id == 14)
+            <div class="col-sm"><a href="/travel/{{ $kanto->id }}"><img src="{{ asset('storage/profiles/'. $kanto->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>

@@ -9,14 +9,16 @@
 
 @section('content')
 
-<h2>北海道,東北</h2>
+<h2>北海道・東北</h2>
 
 <div class="container">
     <p>北海道</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($hokkaidous as $hokkaidou)
-            <div class="col-sm"><a href="/travel/{{ $hokkaidou->id }}"><img src="{{ asset('storage/profiles/'. $hokkaidou->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($hoka_tohos as $hoka_toho)
+            @if($hoka_toho->prefecture_id == 1)
+            <div class="col-sm"><a href="/travel/{{ $hoka_toho->id }}"><img src="{{ asset('storage/profiles/'. $hoka_toho->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -25,8 +27,10 @@
     <p>青森県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($aomoris as $aomori)
-            <div class="col-sm"><a href="/travel/{{ $aomori->id }}"><img src="{{ asset('storage/profiles/'. $aomori->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($hoka_tohos as $hoka_toho)
+            @if($hoka_toho->prefecture_id == 2)
+            <div class="col-sm"><a href="/travel/{{ $hoka_toho->id }}"><img src="{{ asset('storage/profiles/'. $hoka_toho->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -35,8 +39,10 @@
     <p>岩手県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($iwates as $iwate)
-            <div class="col-sm"><a href="/travel/{{ $iwate->id }}"><img src="{{ asset('storage/profiles/'. $iwate->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($hoka_tohos as $hoka_toho)
+            @if($hoka_toho->prefecture_id == 3)
+            <div class="col-sm"><a href="/travel/{{ $hoka_toho->id }}"><img src="{{ asset('storage/profiles/'. $hoka_toho->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -45,8 +51,10 @@
     <p>宮城県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($miyagis as $miyagi)
-            <div class="col-sm"><a href="/travel/{{ $miyagi->id }}"><img src="{{ asset('storage/profiles/'. $miyagi->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($hoka_tohos as $hoka_toho)
+            @if($hoka_toho->prefecture_id == 4)
+            <div class="col-sm"><a href="/travel/{{ $hoka_toho->id }}"><img src="{{ asset('storage/profiles/'. $hoka_toho->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -55,8 +63,10 @@
     <p>秋田県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($akitas as $akita)
-            <div class="col-sm"><a href="/travel/{{ $akita->id }}"><img src="{{ asset('storage/profiles/'. $akita->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($hoka_tohos as $hoka_toho)
+            @if($hoka_toho->prefecture_id == 5)
+            <div class="col-sm"><a href="/travel/{{ $hoka_toho->id }}"><img src="{{ asset('storage/profiles/'. $hoka_toho->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -65,8 +75,10 @@
     <p>山形県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($yamagatas as $yamagata)
-            <div class="col-sm"><a href="/travel/{{ $yamagata->id }}"><img src="{{ asset('storage/profiles/'. $yamagata->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($hoka_tohos as $hoka_toho)
+            @if($hoka_toho->prefecture_id == 6)
+            <div class="col-sm"><a href="/travel/{{ $hoka_toho->id }}"><img src="{{ asset('storage/profiles/'. $hoka_toho->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -75,8 +87,10 @@
     <p>福島県</p>
     <div class="row">
         <div class="d-flex">
-            @foreach($hukushimas as $hukushima)
-            <div class="col-sm"><a href="/travel/{{ $hukushima->id }}"><img src="{{ asset('storage/profiles/'. $hukushima->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @foreach($hoka_tohos as $hoka_toho)
+            @if($hoka_toho->prefecture_id == 7)
+            <div class="col-sm"><a href="/travel/{{ $hoka_toho->id }}"><img src="{{ asset('storage/profiles/'. $hoka_toho->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            @endif
             @endforeach
         </div>
     </div>
