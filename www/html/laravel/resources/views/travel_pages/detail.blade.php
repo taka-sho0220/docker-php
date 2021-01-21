@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
 
-@section('title', '一人でいけるモン。')
+@section('title', 'ひとりでいけるモン。')
 
 @section('content_header')
-<h1>一人でいけるモン（詳細）</h1>
+<h1>ひとりでいけるモン（詳細）</h1>
 @stop
 <style>
     table,

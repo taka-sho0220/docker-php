@@ -1,16 +1,14 @@
 @extends('adminlte::page')
 
-@section('title', '一人でいけるモン。')
+@section('title', 'ひとりでいけるモン。')
 
 @section('content_header')
-<h1>一人でいけるモン</h1>
+<h1>ひとりでいけるモン</h1>
 @stop
 
 
 @section('content')
-
 <h2>北海道・東北</h2>
-
 <div class="container">
     <p>北海道</p>
     <div class="row">
