@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', '一人でいけるモン。')
+@section('title', 'ひとりでいけるモン。')
 
 @section('content_header')
-<h1>一人でいけるモン</h1>
+<h1>ひとりでいけるモン</h1>
 @stop
 
 
