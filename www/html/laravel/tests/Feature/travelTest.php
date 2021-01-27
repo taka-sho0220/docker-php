@@ -72,104 +72,104 @@ class travelTest extends TestCase
         $response->assertStatus(200)
             ->assertViewIs('travel_pages.detail');
     }
-    /**
-     * @test
-     * @return void
-     */
-    public function test_travelcreate()
-    {
-        $travel = factory(Travel::class)->create();
+    // /**
+    //  * @test
+    //  * @return void
+    //  */
+    // public function test_travelcreate()
+    // {
+    //     $travel = factory(Travel::class)->create();
 
-        $response = $this
-        ->get(route('form'));
+    //     $response = $this
+    //     ->get(route('form'));
         
-        $response->assertStatus(200)
-            ->assertViewIs('travel_pages.form');
+    //     $response->assertStatus(200)
+    //         ->assertViewIs('travel_pages.form');
 
-        $reqponse = $this->from('/travel/form')->post('/travel/create',$travel->toArray());
+    //     $reqponse = $this->from('/travel/form')->post('/travel/create',$travel->toArray());
 
-        $response->assertStatus(200);
-        $this->assertDatabaseHas('travels', ['id' => $travel->id]);
+    //     $response->assertStatus(200);
+    //     $this->assertDatabaseHas('travels', ['id' => $travel->id]);
 
-    }
-    /**
-     * @test
-     * @return void
-     */
-    public function test_travelupdate()
-    {
-        $travel = factory(Travel::class)->create();
+    // }
+    // /**
+    //  * @test
+    //  * @return void
+    //  */
+    // public function test_travelupdate()
+    // {
+    //     $travel = factory(Travel::class)->create();
 
-        $response = $this
-            ->get(route('edit', [$travel->id]));
+    //     $response = $this
+    //         ->get(route('edit', [$travel->id]));
 
-        $response->assertStatus(200)
-            ->assertViewIs('travel_pages.edit');
+    //     $response->assertStatus(200)
+    //         ->assertViewIs('travel_pages.edit');
 
-        $reqponse = $this->from('/travel/form')->post('/travel/create',$travel->toArray());
+    //     $reqponse = $this->from('/travel/form')->post('/travel/create',$travel->toArray());
 
-        $this->assertDatabaseHas('travels', ['id' => $travel->id]);
-    }
-    /**
-     * @test
-     * @return void
-     */
-    public function test_traveldelete()
-    {
-        $travel = factory(Travel::class)->create();
+    //     $this->assertDatabaseHas('travels', ['id' => $travel->id]);
+    // }
+    // /**
+    //  * @test
+    //  * @return void
+    //  */
+    // public function test_traveldelete()
+    // {
+    //     $travel = factory(Travel::class)->create();
 
-        $this->assertDatabaseHas('travels',['id' => $travel->id]);
+    //     $this->assertDatabaseHas('travels',['id' => $travel->id]);
 
-        $response = $this->delete('travel/delete/' . $travel->toArray);
+    //     $response = $this->delete('travel/delete/' . $travel->toArray);
         
-        $this->assertDatabaseMissing('travels', ['id' => $travel->toArray]);
-    }
-    /**
-     * @test
-     * @return void
-     */
-    public function test_travelplace()
-    {
-        $response = $this
-            ->get('/travel/hoka_toho');
+    //     $this->assertDatabaseMissing('travels', ['id' => $travel->toArray]);
+    // }
+    // /**
+    //  * @test
+    //  * @return void
+    //  */
+    // public function test_travelplace()
+    // {
+    //     $response = $this
+    //         ->get('/travel/hoka_toho');
     
-        $response->assertStatus(200)
-            ->assertViewIs('travel_pages.place_parts.hoka_toho');
+    //     $response->assertStatus(200)
+    //         ->assertViewIs('travel_pages.place_parts.hoka_toho');
         
-        $response = $this
-            ->get('/travel/kanto');
+    //     $response = $this
+    //         ->get('/travel/kanto');
     
-        $response->assertStatus(200)
-            ->assertViewIs('travel_pages.place_parts.kanto');
+    //     $response->assertStatus(200)
+    //         ->assertViewIs('travel_pages.place_parts.kanto');
         
-        $response = $this
-            ->get('/travel/tubu');
+    //     $response = $this
+    //         ->get('/travel/tubu');
     
-        $response->assertStatus(200)
-            ->assertViewIs('travel_pages.place_parts.tubu');
+    //     $response->assertStatus(200)
+    //         ->assertViewIs('travel_pages.place_parts.tubu');
         
-        $response = $this
-            ->get('/travel/kansai');
+    //     $response = $this
+    //         ->get('/travel/kansai');
     
-        $response->assertStatus(200)
-            ->assertViewIs('travel_pages.place_parts.kansai');
+    //     $response->assertStatus(200)
+    //         ->assertViewIs('travel_pages.place_parts.kansai');
         
-        $response = $this
-            ->get('/travel/cyugoku');
+    //     $response = $this
+    //         ->get('/travel/cyugoku');
     
-        $response->assertStatus(200)
-            ->assertViewIs('travel_pages.place_parts.cyugoku');
+    //     $response->assertStatus(200)
+    //         ->assertViewIs('travel_pages.place_parts.cyugoku');
         
-        $response = $this
-            ->get('/travel/shikoku');
+    //     $response = $this
+    //         ->get('/travel/shikoku');
     
-        $response->assertStatus(200)
-            ->assertViewIs('travel_pages.place_parts.shikoku');
+    //     $response->assertStatus(200)
+    //         ->assertViewIs('travel_pages.place_parts.shikoku');
         
-        $response = $this
-            ->get('/travel/kyu_oki');
+    //     $response = $this
+    //         ->get('/travel/kyu_oki');
     
-        $response->assertStatus(200)
-            ->assertViewIs('travel_pages.place_parts.kyu_oki');
-        }
+    //     $response->assertStatus(200)
+    //         ->assertViewIs('travel_pages.place_parts.kyu_oki');
+    //     }
 }
