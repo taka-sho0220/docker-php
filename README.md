@@ -60,11 +60,11 @@
 Githubからダウンロードするかgit cloneしてください。
 
 ダウンロード先
-https://github.com/taka-sho0220/laravel-travel.git
+https://github.com/taka-sho0220/docker-travel.git
 
 git cloneする場合
 ```
-git clone https://github.com/taka-sho0220/laravel-travel.git
+git clone https://github.com/taka-sho0220/docker-travel.git
 ```
 
 ### シボリックリンク設定
