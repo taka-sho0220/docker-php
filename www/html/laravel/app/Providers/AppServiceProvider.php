@@ -26,7 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(UrlGenerator $url)
     {
-        Schema::defaultStringLength(191);
         if ('https' == Request::header('x-forwarded-proto')) {
             $url->forceScheme('https');
             $this->app['request']->server->set('HTTPS','on');
