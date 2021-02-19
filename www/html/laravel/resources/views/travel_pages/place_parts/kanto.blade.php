@@ -39,7 +39,7 @@
         <div class="d-flex">
             @foreach($kantos as $kanto)
             @if($kanto->prefecture_id == 10)
-            <div class="col-sm"><a href="/travel/{{ $gunma->id }}"><img src="{{ asset('storage/profiles/'. $gunma->photos) }}" class="img-rounded w-100" alt=""></a></div>
+            <div class="col-sm"><a href="/travel/{{ $kanto->id }}"><img src="{{ asset('storage/profiles/'. $kanto->photos) }}" class="img-rounded w-100" alt=""></a></div>
             @endif
             @endforeach
         </div>
